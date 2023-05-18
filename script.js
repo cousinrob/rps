@@ -6,10 +6,15 @@ function getComputerChoice() {
 
 const computerChoice = getComputerChoice();
 
-const playerChoice = "rock";
+const playerChoice = "ROCK";
 
 function playRound(computerChoice, playerChoice) {
-    if (computerChoice===playerChoice.toLowerCase()) {
+    if (computerChoice.toLowerCase()===playerChoice.toLowerCase()) {
         return "It's a tie!";
     }
+    else {
+        return "The computer chose " + computerChoice;
+    }
 }
+
+console.log(playRound(computerChoice, playerChoice));
