@@ -6,10 +6,10 @@ function getComputerChoice() {
 
 const computerChoice = getComputerChoice();
 
-const playerChoice = "ROCK";
+const playerChoice = prompt('Choose rock, paper, or scissors');
 
 function playRound(computerChoice, playerChoice) {
-    if (computerChoice.toLowerCase()===playerChoice.toLowerCase()) {
+    if (computerChoice===playerChoice.toLowerCase()) {
         return "It's a tie!";
     }
     else {
