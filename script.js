@@ -14,8 +14,11 @@ function playRound(computerChoice, playerChoice) {
     if (computerChoice===playerChoice.toLowerCase()) {
         return "It's a tie! your score is " + score + " out of 5";
     }
-    else {
-        return "The computer chose " + computerChoice;
+    else if (computerChoice==='rock' && playerChoice.toLowerCase()==='paper'){
+        return "The computer chose " + computerChoice + ". You win! Your score is " + score++ + " out of 5.";
+    }
+    else if (computerChoice==='paper' && playerChoice.toLowerCase()==='rock'){
+        return "The computer chose " + computerChoice + ". You lost! Your score is " + score + " out of 5.";
     }
 }
 
