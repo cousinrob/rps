@@ -36,7 +36,9 @@ function playRound(computerChoice, playerChoice) {
 
 function game() {
     console.log(playRound(computerChoice, playerChoice));
+    getComputerChoice();
     console.log(playRound(computerChoice, playerChoice));
+    getComputerChoice();
     console.log(playRound(computerChoice, playerChoice));
     console.log(playRound(computerChoice, playerChoice));
     console.log(playRound(computerChoice, playerChoice));
