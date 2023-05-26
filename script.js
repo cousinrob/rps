@@ -38,6 +38,9 @@ function playRound(computerChoice, playerChoice) {
     else if (computerChoice==='scissors' && playerChoice.toLowerCase()==='paper'){
         return "The computer chose " + computerChoice + ". You lost! Your score is " + score + " out of 5.";
     }
+    else {
+        return "Your response was invalid";
+    }
 }
 
 function game() {
