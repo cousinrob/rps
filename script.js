@@ -59,4 +59,26 @@ function game() {
     console.log(playRound(computerChoice, playerChoice));
 }
 
+function finalScore() {
+    if (score===0) {
+        return "Your score is 0 out of 5! Ouch...a definite loss.";
+    }
+    else if (score===1) {
+        return "Your score is 1 out of 5! Well...at least you got something.";
+    }
+    else if (score===2) {
+        return "Your score is 2 out of 5! I guess you're not a total loser?";
+    }
+    else if (score===3) {
+        return "Your score is 3 out of 5! So close!";
+    }
+    else if (score===4) {
+        return "Your score is 4 out of 5! Good show!";
+    }
+    else if (score===5) {
+        return "Your score is 5 out of 5! You're the champion!";
+    }
+}
+
 console.log(game())
+console.log(finalScore())
