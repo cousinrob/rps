@@ -5,12 +5,12 @@ function getComputerChoice() {
     }
 
 function getPlayerChoice() {
-    const answer=prompt('Choose rock, paper, or scissors')
+    let answer=prompt('Choose rock, paper, or scissors')
     return(answer);
 }
 
-    const computerChoice = getComputerChoice();
-    const playerChoice = getPlayerChoice();
+    let computerChoice = getComputerChoice();
+    let playerChoice = getPlayerChoice();
 
 
     let score = 0;
@@ -45,13 +45,17 @@ function playRound(computerChoice, playerChoice) {
 
 function game() {
     console.log(playRound(computerChoice, playerChoice));
-    getPlayerChoice();
+    computerChoice=getComputerChoice();
+    playerChoice=getPlayerChoice();
     console.log(playRound(computerChoice, playerChoice));
-    getPlayerChoice();
+    computerChoice=getComputerChoice();
+    playerChoice=getPlayerChoice();
     console.log(playRound(computerChoice, playerChoice));
-    getPlayerChoice();
+    computerChoice=getComputerChoice();
+    playerChoice=getPlayerChoice();
     console.log(playRound(computerChoice, playerChoice));
-    getPlayerChoice();
+    computerChoice=getComputerChoice();
+    playerChoice=getPlayerChoice();
     console.log(playRound(computerChoice, playerChoice));
 }
 
