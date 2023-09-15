@@ -4,13 +4,9 @@ function getComputerChoice() {
         return(rps[choice]);
     }
 
-function getPlayerChoice() {
-    let answer=prompt('Choose rock, paper, or scissors')
-    return(answer);
-}
 
     let computerChoice = getComputerChoice();
-    let playerChoice = getPlayerChoice();
+
 
 
     let score = 0;
@@ -18,46 +14,44 @@ function getPlayerChoice() {
 function playRound(computerChoice, playerChoice) {
 
     if (computerChoice===playerChoice.toLowerCase()) {
-        return "It's a tie! your score is " + score + " out of 5";
+        console.log("It's a tie! your score is " + score + " out of 5");
     }
     else if (computerChoice==='rock' && playerChoice.toLowerCase()==='paper'){
-        return "The computer chose " + computerChoice + ". You won! Your score is " + ++score + " out of 5.";
+        console.log("The computer chose " + computerChoice + ". You won! Your score is " + ++score + " out of 5.");
     }
     else if (computerChoice==='paper' && playerChoice.toLowerCase()==='rock'){
-        return "The computer chose " + computerChoice + ". You lost! Your score is " + score + " out of 5.";
+        console.log("The computer chose " + computerChoice + ". You lost! Your score is " + score + " out of 5.");
     }
     else if (computerChoice==='rock' && playerChoice.toLowerCase()==='scissors'){
-        return "The computer chose " + computerChoice + ". You lost! Your score is " + score + " out of 5.";
+        console.log("The computer chose " + computerChoice + ". You lost! Your score is " + score + " out of 5.");
     }
     else if (computerChoice==='scissors' && playerChoice.toLowerCase()==='rock'){
-        return "The computer chose " + computerChoice + ". You won! Your score is " + ++score + " out of 5.";
+        console.log("The computer chose " + computerChoice + ". You won! Your score is " + ++score + " out of 5.");
     }
     else if (computerChoice==='paper' && playerChoice.toLowerCase()==='scissors'){
-        return "The computer chose " + computerChoice + ". You won! Your score is " + ++score + " out of 5.";
+        console.log("The computer chose " + computerChoice + ". You won! Your score is " + ++score + " out of 5.");
     }
     else if (computerChoice==='scissors' && playerChoice.toLowerCase()==='paper'){
-        return "The computer chose " + computerChoice + ". You lost! Your score is " + score + " out of 5.";
+        console.log("The computer chose " + computerChoice + ". You lost! Your score is " + score + " out of 5.");
     }
     else {
-        return "Your response was invalid";
+        console.log("Your response was invalid");
     }
 }
 
-function game() {
-    console.log(playRound(computerChoice, playerChoice));
-    computerChoice=getComputerChoice();
-    playerChoice=getPlayerChoice();
-    console.log(playRound(computerChoice, playerChoice));
-    computerChoice=getComputerChoice();
-    playerChoice=getPlayerChoice();
-    console.log(playRound(computerChoice, playerChoice));
-    computerChoice=getComputerChoice();
-    playerChoice=getPlayerChoice();
-    console.log(playRound(computerChoice, playerChoice));
-    computerChoice=getComputerChoice();
-    playerChoice=getPlayerChoice();
-    console.log(playRound(computerChoice, playerChoice));
-}
+const rock = document.querySelector('#rock');
+const paper = document.querySelector('#paper');
+const scissors = document.querySelector('#scissors');
+
+rock.addEventListener("click", function(e) {
+    playRound(computerChoice, "rock");
+});
+paper.addEventListener("click", function(e) {
+    playRound(computerChoice, "paper");
+});
+scissors.addEventListener("click", function(e) {
+    playRound(computerChoice, "scissors");
+});
 
 function finalScore() {
     if (score===0) {
@@ -79,6 +73,3 @@ function finalScore() {
         return "Your score is 5 out of 5! You're the champion!";
     }
 }
-
-console.log(game())
-console.log(finalScore())
