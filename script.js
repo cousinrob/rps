@@ -16,28 +16,35 @@ function getComputerChoice() {
 function playRound(computerChoice, playerChoice) {
 
     if (computerChoice===playerChoice.toLowerCase()) {
-        console.log("It's a tie! your score is " + score + " out of 5");
+        result.textContent = "It's a tie!"
+        scorecard.textContent= "Your score is " + score + " out of 5.";
     }
     else if (computerChoice==='rock' && playerChoice.toLowerCase()==='paper'){
-        console.log("The computer chose " + computerChoice + ". You won! Your score is " + ++score + " out of 5.");
+        result.textContent = "The computer chose " + computerChoice + ". You won!";
+        scorecard.textContent = "Your score is " + ++score + " out of 5.";
     }
     else if (computerChoice==='paper' && playerChoice.toLowerCase()==='rock'){
-        console.log("The computer chose " + computerChoice + ". You lost! Your score is " + score + " out of 5.");
+        result.textContent = "The computer chose " + computerChoice + ". You lost!";
+        scorecard.textContent = "Your score is " + score + " out of 5.";
     }
     else if (computerChoice==='rock' && playerChoice.toLowerCase()==='scissors'){
-        console.log("The computer chose " + computerChoice + ". You lost! Your score is " + score + " out of 5.");
+        result.textContent = "The computer chose " + computerChoice + ". You lost!";
+        scorecard.textContent = "Your score is " + score + " out of 5.";
     }
     else if (computerChoice==='scissors' && playerChoice.toLowerCase()==='rock'){
-        console.log("The computer chose " + computerChoice + ". You won! Your score is " + ++score + " out of 5.");
+        result.textContent = "The computer chose " + computerChoice + ". You won!";
+        scorecard.textContent="Your score is " + ++score + " out of 5.";
     }
     else if (computerChoice==='paper' && playerChoice.toLowerCase()==='scissors'){
-        console.log("The computer chose " + computerChoice + ". You won! Your score is " + ++score + " out of 5.");
+        result.textContent = "The computer chose " + computerChoice + ". You won!";
+        scorecard.textContent= "Your score is " + ++score + " out of 5.";
     }
     else if (computerChoice==='scissors' && playerChoice.toLowerCase()==='paper'){
-        console.log("The computer chose " + computerChoice + ". You lost! Your score is " + score + " out of 5.");
+        result.textContent = "The computer chose " + computerChoice + ". You lost!";
+        scorecard.textContent = "Your score is " + score + " out of 5.";
     }
     else {
-        console.log("Your response was invalid");
+        result.textContent = "Your response was invalid";
     }
 }
 
