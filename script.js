@@ -10,6 +10,8 @@ function getComputerChoice() {
 
 
     let score = 0;
+    const result = document.querySelector('#result');
+    const scorecard = document.querySelector('#score');
 
 function playRound(computerChoice, playerChoice) {
 
@@ -44,14 +46,19 @@ const paper = document.querySelector('#paper');
 const scissors = document.querySelector('#scissors');
 
 rock.addEventListener("click", function(e) {
+    computerChoice=getComputerChoice();
     playRound(computerChoice, "rock");
 });
 paper.addEventListener("click", function(e) {
+    computerChoice=getComputerChoice();
     playRound(computerChoice, "paper");
 });
 scissors.addEventListener("click", function(e) {
+    computerChoice=getComputerChoice();
     playRound(computerChoice, "scissors");
 });
+
+
 
 function finalScore() {
     if (score===0) {
